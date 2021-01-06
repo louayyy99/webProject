@@ -41,6 +41,7 @@
                     </ul>
                 </li>
                 <li><a href="./contact.php">Contact</a></li>
+  <li><a href="http://localhost/planning/view.php">PLANNING</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -83,6 +84,7 @@
                                 </ul>
                             </li>
                             <li><a href="./contact.php">Contact</a></li>
+  <li><a href="http://localhost/planning/view.php">PLANNING</a></li>
                         </ul>
                     </nav>
                 </div>

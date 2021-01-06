@@ -7,14 +7,14 @@
 extract($_POST);
 $msg = ""; 
 if(isset($_POST['submitBtnsubscribe'])) {
-  $login= trim($_POST['login']);
+  $login = trim($_POST['login']);
   $password = trim($_POST['password']);
   $email = trim($_POST['email']);
   $name = trim($_POST['name']);
   $firstname = trim($_POST['firstname']);
   if($login != "" && $password != "" && $name != "" && $firstname != "") {
     try {
-        $utilisateur = new Utilisateur($name,$firstname,$login,$email,$password);
+        $utilisateur = new Utilisateur($name,$firstname,$email,$login,$password);
         $utilisateurC = new UtilisateurC();
         $utilisateurC->ajouterUtilisateur($utilisateur);
         header ("Location: login.php?status=success");
@@ -207,7 +207,7 @@ if(isset($_POST['submitBtnsubscribe'])) {
                         <form method="post">
                         <input type="text" name="name" id="name" placeholder="Name">
                         <input type="text" name="firstname" id="firstname" placeholder="First name">
-                            <input type="text" name="username" id="username" placeholder="Login">
+                            <input type="text" name="login" id="login" placeholder="Login">
                             <input type="text" name="email" id="email" placeholder="Email">
                             <input type="password" name="password" id="password" placeholder='Password'>
                             

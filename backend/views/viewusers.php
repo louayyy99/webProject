@@ -32,7 +32,11 @@ if (
     else
         $error = "Missing information";
 }
+if(isset($_POST['searchBtn'])) {
+    $search=trim($_POST['searchtxt']);
+    $listeUsers=$utilisateurC->rechercheUtilisateur($search);
 
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -113,6 +117,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                             </thead>
                             <tbody>
                                 <?PHP
+                               
 				foreach($listeUsers as $user){
 			?>
                                 <tr>
@@ -153,8 +158,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                             </tbody>
                         </table>
                         <div > 
-        <input type="text" class="buscar-txt" name="myInput2" onkeyup="myFunction2()" placeholder="Search for name.."  title="Type in a name"/> 
+                        <form method="POST" >
+                        <input type="text" class="buscar-txt" name="searchtxt" id="searchtxt"  placeholder="Search for name.."  title="Type in a name"/> 
         <a class="buscar-btn"> <i class="fa fa-search"></i> </a>
+
+                                            <button type="submit" id="searchBtn" name="searchBtn" class="btn btn-default" value="search">Search</button> 
+                                        </form>
+      
 
 </div> 
                     </div>

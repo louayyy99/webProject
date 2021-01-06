@@ -88,6 +88,25 @@ require_once "../config.php";
 			$e->getMessage();
 		}
 	}
+	
+	function rechercheUtilisateur($login){
+		$sql="SELECT * from user where `login`=:login";
+		$db = config::getConnexion();
+		try {
+			$query=$db->prepare($sql);
+                        $query->bindParam('login', $login, PDO::PARAM_STR);
+			$query->execute();
+
+			$user=$query->fetchAll();
+			return $user;
+		}
+		catch (Exception $e){
+			die('Erreur: '.$e->getMessage());
+		}
+	}
+
+	
+	
 }
 
 ?>

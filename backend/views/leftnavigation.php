@@ -68,12 +68,12 @@
               </li>
               <li class="treeview">
                 <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-edit"></i> <span>PLANNING</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="forms.php"><i class="fa fa-angle-right"></i> General Forms</a></li>
-                  <li><a href="validation.php"><i class="fa fa-angle-right"></i> Form Validations</a></li>
+                  <li><a href="http://localhost/ttms/files/"><i class="fa fa-angle-right"></i> PARAMETRE PLANNING</a></li>
+                  <li><a href="http://localhost/planning/index.php"><i class="fa fa-angle-right"></i> AJOUTER UN PLANNING</a></li>
                 </ul>
               </li>
               <li class="treeview">
